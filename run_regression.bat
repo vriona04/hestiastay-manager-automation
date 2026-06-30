@@ -21,6 +21,10 @@ tests/test_hostel_statistics.py ^
 tests/test_smoke.py ^
 tests/test_pending_rent_payments.py ^
 tests/test_guests_vacating.py ^
+tests/test_owner_contact_information.py ^
+tests/test_profile_wifi_tab.py ^
+tests/test_profile_docs_tab.py ^
+tests/test_profile_payments_tab.py ^
 --html=reports/final_regression.html ^
 --self-contained-html
 

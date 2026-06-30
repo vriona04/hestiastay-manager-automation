@@ -29,6 +29,8 @@ tests/test_bills.py ^
 tests/test_bills_validation.py ^
 tests/test_credits.py ^
 tests/test_credits_validation.py ^
+tests/test_earnings.py ^
+tests/test_kyc_verification.py ^
 --html=reports/final_regression.html ^
 --self-contained-html
 

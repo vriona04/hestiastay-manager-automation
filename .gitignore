@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Pytest
+.pytest_cache/
+
+# Reports
+reports/*.html
+
+# Screenshots & XML dumps
+screenshots/*.png
+screenshots/*.xml
+
+# VS Code
+.vscode/
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db

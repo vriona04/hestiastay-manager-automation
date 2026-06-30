@@ -17,6 +17,7 @@ tests/test_rooms.py ^
 tests/test_booked_rooms.py ^
 tests/test_create_announcement.py ^
 tests/test_profile_menu.py ^
+tests/test_hostel_statistics.py ^
 tests/test_smoke.py ^
 --html=reports/final_regression.html ^
 --self-contained-html

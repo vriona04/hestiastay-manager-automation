@@ -25,6 +25,8 @@ tests/test_owner_contact_information.py ^
 tests/test_profile_wifi_tab.py ^
 tests/test_profile_docs_tab.py ^
 tests/test_profile_payments_tab.py ^
+tests/test_bills.py ^
+tests/test_bills_validation.py ^
 --html=reports/final_regression.html ^
 --self-contained-html
 

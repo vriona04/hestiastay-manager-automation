@@ -1,25 +1,23 @@
-import time
+import pytest
+
+from utils.navigation_helper import open_owner_menu, save_xml
+from utils.logger import log
+from utils.waits import medium_wait
 
 
+@pytest.mark.billing
+@pytest.mark.regression
 def test_credits(driver):
 
-    time.sleep(5)
+    medium_wait()
 
-    # Open Owner Portal menu
-    try:
-        driver.execute_script(
-            "mobile: clickGesture",
-            {"x": 1000, "y": 180}
-        )
-        time.sleep(3)
-    except Exception:
-        pass
+    open_owner_menu(driver)
 
     page = driver.page_source
 
     if "Credits" not in page:
-        print("Credits option not available")
-        print("CREDITS HANDLED")
+        log("Credits option not available")
+        log("CREDITS HANDLED")
         return
 
     try:
@@ -28,19 +26,14 @@ def test_credits(driver):
             "//*[contains(@content-desc,'Credits')]"
         ).click()
 
-        time.sleep(5)
+        medium_wait()
 
     except Exception:
-        print("Credits option not clickable")
-        print("CREDITS HANDLED")
+        log("Credits option not clickable")
+        log("CREDITS HANDLED")
         return
 
-    with open(
-        "screenshots/credits_screen.xml",
-        "w",
-        encoding="utf-8"
-    ) as f:
-        f.write(driver.page_source)
+    save_xml(driver, "screenshots/credits_screen.xml")
 
-    print("CREDITS SCREEN OPENED")
-    print("CREDITS XML SAVED")
+    log("CREDITS SCREEN OPENED")
+    log("CREDITS XML SAVED")

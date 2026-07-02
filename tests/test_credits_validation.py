@@ -1,24 +1,23 @@
-import time
+import pytest
+
+from utils.logger import log
+from utils.navigation_helper import open_owner_menu
+from utils.waits import medium_wait
 
 
+@pytest.mark.billing
+@pytest.mark.regression
 def test_credits_validation(driver):
 
-    time.sleep(5)
+    medium_wait()
 
-    try:
-        driver.execute_script(
-            "mobile: clickGesture",
-            {"x": 1000, "y": 180}
-        )
-        time.sleep(3)
-    except Exception:
-        pass
+    open_owner_menu(driver)
 
     page = driver.page_source
 
     if "Credits" not in page:
-        print("Credits option not available")
-        print("CREDITS VALIDATION HANDLED")
+        log("Credits screen content not available in current app state")
+        log("CREDITS VALIDATION HANDLED")
         return
 
     try:
@@ -27,25 +26,22 @@ def test_credits_validation(driver):
             "//*[contains(@content-desc,'Credits')]"
         ).click()
 
-        time.sleep(5)
+        medium_wait()
 
     except Exception:
-        print("Credits option not clickable")
-        print("CREDITS VALIDATION HANDLED")
+        log("Credits option not clickable")
+        log("CREDITS VALIDATION HANDLED")
         return
 
     page = driver.page_source
 
     if (
         "Credit Balance" in page
-        or "Low Balance" in page
         or "TopUp Credits" in page
+        or "Low Balance" in page
         or "Top-up amount" in page
     ):
-
-        print("CREDITS VALIDATION PASSED")
-
+        log("CREDITS VALIDATION PASSED")
     else:
-
-        print("Credits screen content not available in current app state")
-        print("CREDITS VALIDATION HANDLED")
+        log("Credits screen content not available in current app state")
+        log("CREDITS VALIDATION HANDLED")

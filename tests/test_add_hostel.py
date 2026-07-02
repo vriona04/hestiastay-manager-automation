@@ -1,6 +1,9 @@
+import pytest
 import time
 
 
+@pytest.mark.owner
+@pytest.mark.regression
 def test_add_hostel(driver):
 
     time.sleep(5)

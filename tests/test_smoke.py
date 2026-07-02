@@ -1,7 +1,10 @@
+import pytest
 import time
 from pages.navigation_page import NavigationPage
 
 
+@pytest.mark.smoke
+@pytest.mark.regression
 def test_smoke(driver):
 
     nav = NavigationPage(driver)

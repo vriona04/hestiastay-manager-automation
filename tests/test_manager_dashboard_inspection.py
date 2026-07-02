@@ -1,6 +1,8 @@
+import pytest
 import time
 
 
+@pytest.mark.inspection
 def test_manager_dashboard_inspection(driver):
 
     time.sleep(8)

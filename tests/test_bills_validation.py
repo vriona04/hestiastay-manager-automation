@@ -1,7 +1,11 @@
+import pytest
+
 from pages.bills_page import BillsPage
 from utils.logger import log
 
 
+@pytest.mark.billing
+@pytest.mark.regression
 def test_bills_validation(driver):
 
     bills = BillsPage(driver)

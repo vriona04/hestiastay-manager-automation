@@ -1,6 +1,9 @@
+import pytest
 import time
 
 
+@pytest.mark.profile
+@pytest.mark.regression
 def test_profile_payments_tab(driver):
 
     time.sleep(5)

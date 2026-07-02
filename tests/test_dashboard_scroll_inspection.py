@@ -1,6 +1,9 @@
+import pytest
 import time
 
 
+@pytest.mark.dashboard
+@pytest.mark.inspection
 def test_dashboard_scroll_inspection(driver):
 
     time.sleep(5)

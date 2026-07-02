@@ -1,6 +1,8 @@
+import pytest
 import time
 
 
+@pytest.mark.inspection
 def test_bills_inspection(driver):
 
     time.sleep(5)

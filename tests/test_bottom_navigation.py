@@ -1,6 +1,9 @@
+import pytest
 import time
 
 
+@pytest.mark.navigation
+@pytest.mark.regression
 def test_bottom_navigation(driver):
 
     time.sleep(5)

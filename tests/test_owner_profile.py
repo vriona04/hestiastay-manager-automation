@@ -1,28 +1,30 @@
-import time
+import pytest
+from utils.logger import log
+from utils.navigation_helper import open_owner_menu
+from utils.waits import medium_wait
 
 
+@pytest.mark.profile
+@pytest.mark.regression
 def test_owner_profile(driver):
 
-    time.sleep(5)
+    medium_wait()
+
+    open_owner_menu(driver)
 
     page = driver.page_source
 
     if "Profile" not in page:
-        print("Profile option not available in current app state")
-        print("OWNER PROFILE HANDLED")
+        log("Profile option not available")
+        log("OWNER PROFILE HANDLED")
         return
 
-    try:
-        driver.find_element(
-            "xpath",
-            "//*[contains(@content-desc,'Profile')]"
-        ).click()
+    driver.find_element(
+        "xpath",
+        "//*[contains(@content-desc,'Profile')]"
+    ).click()
 
-        time.sleep(3)
+    medium_wait()
 
-        print("OWNER PROFILE OPENED")
-
-    except Exception:
-        print("Profile option not clickable")
-
-    print("OWNER PROFILE TEST PASSED")
+    log("OWNER PROFILE OPENED")
+    log("OWNER PROFILE TEST PASSED")

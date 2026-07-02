@@ -1,6 +1,9 @@
+import pytest
 import time
 
 
+@pytest.mark.owner
+@pytest.mark.regression
 def test_earnings(driver):
 
     time.sleep(5)

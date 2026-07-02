@@ -1,6 +1,9 @@
+import pytest
 import time
 
 
+@pytest.mark.dashboard
+@pytest.mark.regression
 def test_pending_rent_payments(driver):
 
     time.sleep(5)

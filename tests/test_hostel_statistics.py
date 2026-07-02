@@ -1,6 +1,9 @@
+import pytest
 import time
 
 
+@pytest.mark.dashboard
+@pytest.mark.regression
 def test_hostel_statistics(driver):
 
     time.sleep(5)

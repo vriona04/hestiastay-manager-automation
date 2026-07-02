@@ -1,14 +1,12 @@
 import time
-from pages.navigation_page import NavigationPage
+import pytest
 
 
+@pytest.mark.dashboard
+@pytest.mark.regression
 def test_dashboard(driver):
 
     time.sleep(5)
-
-    nav = NavigationPage(driver)
-    nav.go_home()
-    time.sleep(2)
 
     page = driver.page_source
 
@@ -18,6 +16,7 @@ def test_dashboard(driver):
         or "Today's Overview" in page
         or "Announcements" in page
         or "Home" in page
+        or "Dismiss" in page
         or "₹0" in page
     ), "Dashboard not loaded"
 

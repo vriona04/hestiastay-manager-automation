@@ -1,6 +1,9 @@
+import pytest
 import time
 
 
+@pytest.mark.dashboard
+@pytest.mark.regression
 def test_guests_vacating(driver):
 
     time.sleep(5)

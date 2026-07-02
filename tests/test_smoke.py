@@ -1,6 +1,8 @@
 import pytest
-import time
+
 from pages.navigation_page import NavigationPage
+from utils.logger import log
+from utils.waits import medium_wait
 
 
 @pytest.mark.smoke
@@ -9,24 +11,31 @@ def test_smoke(driver):
 
     nav = NavigationPage(driver)
 
-    print("Verifying Dashboard")
-    nav.go_home()
-    time.sleep(2)
+    log("========== SMOKE TEST STARTED ==========")
 
-    print("Opening Vacancies")
-    nav.open_vacancies()
-    time.sleep(3)
+    try:
+        log("Step 1 : Go Home")
+        nav.go_home()
+        medium_wait()
 
-    print("Opening Rooms")
-    nav.open_rooms()
-    time.sleep(3)
+        log("Step 2 : Open Vacancies")
+        nav.open_vacancies()
+        medium_wait()
 
-    print("Opening Booked")
-    nav.open_booked()
-    time.sleep(3)
+        log("Step 3 : Open Rooms")
+        nav.open_rooms()
+        medium_wait()
 
-    print("Refreshing Dashboard")
-    nav.refresh_dashboard()
-    time.sleep(3)
+        log("Step 4 : Open Booked")
+        nav.open_booked()
+        medium_wait()
 
-    print("MANAGER SMOKE TEST PASSED")
+        log("Step 5 : Refresh Dashboard")
+        nav.refresh_dashboard()
+        medium_wait()
+
+        log("========== SMOKE TEST PASSED ==========")
+
+    except Exception as e:
+        log(f"SMOKE TEST FAILED : {e}")
+        raise

@@ -399,3 +399,43 @@
 [2026-07-02 17:45:57] Step 4 : Open Booked
 [2026-07-02 17:46:11] Step 5 : Refresh Dashboard
 [2026-07-02 17:46:18] ========== SMOKE TEST PASSED ==========
+[2026-07-02 17:51:09] Validation found: Bill Type
+[2026-07-02 17:51:09] Validation found: Amount
+[2026-07-02 17:51:09] Validation found: Please
+[2026-07-02 17:51:09] ADD BILL REQUIRED VALIDATION PASSED
+[2026-07-02 17:53:49] PASS: Add New
+[2026-07-02 17:53:49] PASS: Bill Type
+[2026-07-02 17:53:49] PASS: Amount
+[2026-07-02 17:53:49] PASS: Notes
+[2026-07-02 17:53:49] PASS: Cancel
+[2026-07-02 17:53:49] PASS: Add Bill
+[2026-07-02 17:53:49] ADD BILL FORM VALIDATION PASSED
+[2026-07-02 17:54:10] Validation found: Bill Type
+[2026-07-02 17:54:10] Validation found: Amount
+[2026-07-02 17:54:10] Validation found: Please
+[2026-07-02 17:54:10] ADD BILL REQUIRED VALIDATION PASSED
+[2026-07-02 17:54:37] BILLS SCREEN OPENED
+[2026-07-02 17:54:37] BILLS XML SAVED
+[2026-07-02 17:54:48] Clicked: Bills
+[2026-07-02 17:54:51] BILLS VALIDATION PASSED
+[2026-07-02 17:55:51] Credits option not available
+[2026-07-02 17:55:51] CREDITS HANDLED
+[2026-07-02 17:56:02] Credits screen content not available in current app state
+[2026-07-02 17:56:02] CREDITS VALIDATION HANDLED
+[2026-07-02 17:56:10] DASHBOARD VERIFIED
+[2026-07-02 17:56:10] MANAGER DASHBOARD PASSED
+[2026-07-02 17:56:33] Edit Hostel option not available
+[2026-07-02 17:56:33] EDIT HOSTEL FULL FORM HANDLED
+[2026-07-02 17:56:43] Edit Hostel option not available
+[2026-07-02 17:56:43] EDIT HOSTEL VALIDATION HANDLED
+[2026-07-02 17:57:47] Owner Contact Information not available
+[2026-07-02 17:57:47] OWNER CONTACT INFORMATION HANDLED
+[2026-07-02 17:57:58] Profile option not available
+[2026-07-02 17:57:58] OWNER PROFILE HANDLED
+[2026-07-02 17:59:18] ========== SMOKE TEST STARTED ==========
+[2026-07-02 17:59:18] Step 1 : Go Home
+[2026-07-02 17:59:21] Step 2 : Open Vacancies
+[2026-07-02 17:59:35] Step 3 : Open Rooms
+[2026-07-02 17:59:48] Step 4 : Open Booked
+[2026-07-02 18:00:01] Step 5 : Refresh Dashboard
+[2026-07-02 18:00:07] ========== SMOKE TEST PASSED ==========
